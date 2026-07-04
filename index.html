@@ -3,184 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wellbeing Bingo - RIB</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Wellbeing Bingo</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(160deg, #eaf4fb 0%, #d9ebf8 100%);
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+body{
+    background:#F5F7FA;
+    padding:30px;
+    display:flex;
+    justify-content:center;
 }
 
-.card {
-  background: white;
-  max-width: 600px;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 103, 178, 0.18);
+.container{
+    max-width:800px;
+    width:100%;
 }
 
-.header {
-  background: #0067B2;
-  padding: 16px;
-  text-align: center;
+/* HEADER */
+.top-header{
+    background:linear-gradient(90deg, #0067B1, #2A8CCF);
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    border-radius:14px;
+    margin-bottom:25px;
+    box-shadow:0 6px 20px rgba(0,103,177,0.25);
 }
 
-.header img {
-  height: 42px;
+.top-logo{
+    height:60px;
 }
 
-.wellbeing-logo {
-  display: block;
-  max-width: 85%;
-  margin: 20px auto 10px;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
+.top-title{
+    color:white;
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
-.title-section {
-  text-align: center;
-  padding: 20px;
+/* HOW TO PLAY BOX */
+.how-to-play{
+    background:#E8F3FB;
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:30px;
+    box-shadow:0 4px 12px rgba(0,103,177,0.15);
 }
 
-.title-section h1 {
-  color: #0067B2;
-  font-size: 26px;
-  margin-bottom: 8px;
+.how-to-play h2{
+    color:#0067B1;
+    font-size:26px;
+    margin-bottom:12px;
 }
 
-.title-section p {
-  font-size: 13px;
-  color: #555;
+.how-to-play p{
+    font-size:16px;
+    margin:6px 0;
+    color:#333;
 }
 
-.instructions {
-  margin: 0 20px 10px;
-  padding: 15px;
-  background: #eef7fd;
-  border-radius: 12px;
+/* SECTION HEADERS */
+.section-title{
+    font-size:24px;
+    font-weight:900;
+    color:#0067B1;
+    margin-bottom:12px;
 }
 
-.instructions h2 {
-  color: #0067B2;
-  font-size: 16px;
-  margin-bottom: 8px;
+/* BUTTONS */
+.card-button{
+    background:#0067B1;
+    color:white;
+    padding:14px 20px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+    margin-bottom:15px;
+    text-decoration:none;
 }
 
-.instructions ul {
-  padding-left: 18px;
+.card-button:hover{
+    background:#298FC2;
 }
 
-.instructions li {
-  font-size: 13px;
-  margin-bottom: 5px;
-  color: #333;
+.resources-box{
+    background:white;
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,103,177,0.15);
 }
 
-.menu {
-  padding: 20px;
-}
-
-.menu-title {
-  color: #0067B2;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.menu-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid #0067B2;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #1a1a1a;
-  transition: transform 0.1s;
-}
-
-.menu-card:hover {
-  transform: scale(1.03);
-  background: #eef7fd;
-}
-
-.menu-text {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.menu-icon {
-  color: #0067B2;
-}
-
-.footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 12px;
-  color: #5b6770;
+.resources-box p{
+    font-size:16px;
+    margin:6px 0;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-  <div class="header">
-    RIB-logo.png
-  </div>
-
-  <img src="RIB-logo.png" class="wellbeing-logo" alt="Wellbeing Logo">
-
-  <div class="title-section">
-    <h1>Wellbeing Bingo</h1>
-  </div>
-
-  <div class="instructions">
-    <h2>How to Play</h2>
-    <ul>
-      <li>Choose one of the bingo cards below</li>
-      <li>Click a tile when you complete the activity</li>
-      <li>Try to complete as many tiles as possible</li>
-      <li>Certain tiles require links, which can be found in the resources page</li>
-      <li>Once you complete all tiles, comment a screenshot of the page and we'll plant a tree!</li>
-    </ul>
-  </div>
-
-  <div class="menu">
-
-    <div class="menu-title">Bingo Cards</div>
-
-    <a href="bingo1.html" class="menu-card">
-      <span class="menu-text">Wellbeing Bingo 1</span>
-      <i class="fa-solid fa-arrow-right menu-icon"></i>
-    </a>
-
-  
-    <div class="menu-title" style="margin-top:20px;">
-      Resources
+    <!-- HEADER WITH LOGO -->
+    <div class="top-header">
+        <img src="RIB-logo.png" alt="RIB Logo" class="top-logo">
+        <h1 class="top-title">Wellbeing Bingo</h1>
     </div>
 
+    <!-- HOW TO PLAY -->
+    <div class="how-to-play">
+        <h2>How to Play</h2>
+        <p>Choose one of the bingo cards below</p>
+        <p>Click a tile when you complete the activity</p>
+        <p>Try to complete as many tiles as possible</p>
+        <p>Certain tiles require links, which can be found in the resources page</p>
+        <p>Once you complete all tiles, comment a screenshot of the page and we’ll plant a tree!</p>
+    </div>
 
+    <!-- BINGO CARDS -->
+    <div class="section-title">Bingo Cards</div>
 
-  </div>
+    <a href="bingo1.html" class="card-button">
+        Wellbeing Bingo 1
+        <span>➜</span>
+    </a>
 
-  <div class="footer">
-    RIB Wellbeing Network
-  </div>
+    <!-- RESOURCES -->
+    <div class="section-title">Resources</div>
+
+    <div class="resources-box">
+        <p>• Recognition links</p>
+        <p>• Charity donation links</p>
+        <p>• Wellbeing tips</p>
+        <p>• Gratitude journal templates</p>
+    </div>
 
 </div>
 
