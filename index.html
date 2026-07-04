@@ -3,15 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<tile>WELLBEING Bingo - RIB</tile>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{ margin:0; padding:0; box-sizing:border-box;}
 
 body{
     font-family:Arial,sans-serif;
@@ -22,9 +18,8 @@ body{
     align-items:flex-start;
     padding:20px;
 }
-
 .card{
-    background:white;
+    background: white;
     max-width:580px;
     width:100%;
     border-radius:16px;
@@ -32,36 +27,30 @@ body{
     box-shadow:0 8px 32px rgba(0,103,177,0.18);
 }
 
-.header{
+.header {
     background:#0067B1;
     padding:16px 20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+   text-align: center;
+}
+.header img {
+    max-width:85%
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.logo{
-    height:50px;
-}
-
-.header h1{
-    color:white;
-    font-size:32px;
-    letter-spacing:3px;
-    font-weight:900;
-}
-
-.title-section{
-    padding:18px 20px 6px;
-    text-align:center;
-    background:white;
-}
+    .title-section {
+        padding: 18px, 20px, 6px;
+        text-align: center;
+        background: white;
+    }
 
 .bingo-word{
     font-size:30px;
     font-weight:900;
     color:#0067B1;
     letter-spacing:3px;
+    margin-top: 2px;
 }
 
 .grid{
@@ -69,6 +58,7 @@ body{
     grid-template-columns:repeat(5,1fr);
     gap:7px;
     padding:12px;
+    background: white;
 }
 
 .tile{
@@ -87,7 +77,7 @@ body{
     background:white;
 }
 
-.tile:hover{
+.tile:hover {
     transform:scale(1.04);
     box-shadow:0 4px 14px rgba(0,103,177,.25);
 }
@@ -220,7 +210,7 @@ body{
 <div class="card">
 
 <div class="header">
-    <img src="Rib logo .png" class="logo" alt="Logo">
+    <img src="RIB logo .png" class="logo" alt="Logo">
 </div>
 
 <div id="bingoBanner" class="bingo-banner">
