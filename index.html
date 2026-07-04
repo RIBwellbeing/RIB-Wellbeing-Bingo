@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WELLBEING Bingo - RIB</title>
+<title>Wellbeing Bingo</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -33,16 +33,25 @@ body{
     box-shadow:0 8px 32px rgba(0,103,177,0.18);
 }
 
+/* NEW HEADER WITH LOGO */
 .header{
     background:#0067B1;
     padding:16px 20px;
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    height:40px;
 }
 
 .header h1{
     color:white;
-    font-size:36px;
+    font-size:32px;
     letter-spacing:3px;
+    font-weight:900;
 }
 
 .title-section{
@@ -97,10 +106,6 @@ body{
     line-height:1.35;
 }
 
-.ul{
-    text-decoration:underline;
-}
-
 .tile.bonus{
     background:linear-gradient(145deg,#0067B1,#298FC2);
     border-color:#0067B1;
@@ -134,17 +139,9 @@ body{
 }
 
 @keyframes popIn{
-    0%{
-        transform:scale(.2);
-        opacity:0;
-    }
-    65%{
-        transform:scale(1.15);
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-    }
+    0%{ transform:scale(.2); opacity:0; }
+    65%{ transform:scale(1.15); }
+    100%{ transform:scale(1); opacity:1; }
 }
 
 .footer{
@@ -215,14 +212,8 @@ body{
 }
 
 @media(max-width:768px){
-
-    .grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .tile{
-        min-height:100px;
-    }
+    .grid{ grid-template-columns:repeat(2,1fr); }
+    .tile{ min-height:100px; }
 }
 </style>
 </head>
@@ -231,8 +222,10 @@ body{
 
 <div class="card">
 
+<!-- NEW HEADER -->
 <div class="header">
-    <h1>RIB</h1>
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <h1>Wellbeing Bingo</h1>
 </div>
 
 <div id="bingoBanner" class="bingo-banner">
@@ -254,7 +247,6 @@ body{
 <div class="tile" onclick="tog(this)"><span class="tile-text">Pay a compliment to a stranger</span><div class="overlay"><i class="fa-solid fa-heart fa-2x"></i></div></div>
 
 <div class="tile" onclick="tog(this)"><span class="tile-text">Start a conversation with someone new</span><div class="overlay"><i class="fa-solid fa-comments fa-2x"></i></div></div>
-
 
 <div class="tile" onclick="tog(this)"><span class="tile-text">Wave at someone</span><div class="overlay"><i class="fa-solid fa-hand fa-2x"></i></div></div>
 
@@ -323,26 +315,21 @@ function upd(){
     var total=tiles.length;
 
     var pct=Math.round((done/total)*100);
-
     document.getElementById("bar").style.width=pct+"%";
 
     if(done===total){
-        document.getElementById("prog").textContent=
-        "All "+total+" tiles completed!";
+        document.getElementById("prog").textContent="All "+total+" tiles completed!";
         document.getElementById("bingoBanner").style.display="block";
     }else{
-        document.getElementById("prog").textContent=
-        done+" / "+total+" tiles completed";
+        document.getElementById("prog").textContent=done+" / "+total+" tiles completed";
         document.getElementById("bingoBanner").style.display="none";
     }
 }
 
 function resetAll(){
-    document.querySelectorAll(".tile.completed")
-      .forEach(function(t){
-          t.classList.remove("completed");
-      });
-
+    document.querySelectorAll(".tile.completed").forEach(function(t){
+        t.classList.remove("completed");
+    });
     upd();
 }
 </script>
